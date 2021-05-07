@@ -1,0 +1,5 @@
+version: "2.0"
+nlu:
+- intent: phone_system
+  examples: |
+    - my phone system is [premise-based](phone_system_type)[premise-based](phone_system_type)

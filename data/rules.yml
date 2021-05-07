@@ -1,0 +1,169 @@
+version: "2.0"
+rules:
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Project show form
+    steps:
+      - intent: qoute_phone
+      - action: project_form
+      - active_loop: project_form
+
+  - rule: Submit Project form
+    condition:
+      # Condition that form is active.
+      - active_loop: project_form
+    steps:
+      # Form is deactivated
+      - action: project_form
+      - active_loop: null
+      - slot_was_set:
+          - phone_system: null
+          - brand_system: null
+          - what_industry: null
+          - many_phones: null
+          - multiple_locations: null
+          - many_people: null
+          - website_address: null
+          - more_items: null
+          - come_to_Quoteaphone: null
+          - premier_industry: null
+          - following_information: null
+          - First_name: null
+          - Last_name: null
+          - Business_Title: null
+          - Company_Name: null
+          - Email_user: null
+          - Phone_number: null
+          - Address_user: null
+          - city_user: null
+          - state_user: null
+          - zip_user: null
+      # The actions we want to run when the form is submitted.
+      - action: action_submitproject
+
+  - rule: Section show form
+    steps:
+      - intent: show_sections
+      - action: section_form
+      - active_loop: section_form
+
+  - rule: Submit Section form
+    condition:
+      # Condition that form is active.
+      - active_loop: section_form
+    steps:
+      # Form is deactivated
+      - action: section_form
+      - active_loop: null
+      - slot_was_set:
+          - sections_count: null
+      # The actions we want to run when the form is submitted.
+      - action: action_submitsection
+
+  - rule: diary show form
+    steps:
+      - intent: show_diaries
+      - action: diary_form
+      - active_loop: diary_form
+
+  - rule: Submit diary form
+    condition:
+      # Condition that form is active.
+      - active_loop: diary_form
+    steps:
+      # Form is deactivated
+      - action: diary_form
+      - active_loop: null
+      - slot_was_set:
+          - diaries_count: null
+      # The actions we want to run when the form is submitted.
+      - action: action_submitdiary
+
+  - rule: create diary form
+    steps:
+      - intent: create_diary
+      - action: utter_create_diary_form
+      - action: create_diary_form
+      - active_loop: create_diary_form
+
+  - rule: Submit create diary form
+    condition:
+      # Condition that form is active.
+      - active_loop: create_diary_form
+    steps:
+      - action: create_diary_form
+      - active_loop: null
+      # The action we want to run when the form is submitted.
+      - action: action_submitcreatediary
+
+  - rule: Open diary form
+    steps:
+      - intent: open_diary
+      - action: open_diary_form
+      - active_loop: open_diary_form
+
+  - rule: Submit open diary form
+    condition:
+      # Condition that form is active.
+      - active_loop: open_diary_form
+    steps:
+      - action: open_diary_form
+      - active_loop: null
+      # The action we want to run when the form is submitted.
+      - action: action_opendiary
+
+  - rule: Show section for project form
+    steps:
+      - intent: show_sections_for_project
+      - action: show_sectionforproject_form
+      - active_loop: show_sectionforproject_form
+
+  - rule: Submit show section for project form
+    condition:
+      # Condition that form is active.
+      - active_loop: show_sectionforproject_form
+    steps:
+      - action: show_sectionforproject_form
+      - active_loop: null
+      # The action we want to run when the form is submitted.
+      - action: action_submishowtsectionforproject
+
+  - rule: Show diary for section
+    steps:
+      - intent: show_diary_for_section
+      - action: show_diaryforsection_form
+      - active_loop: show_diaryforsection_form
+
+  - rule: Submit show diary for a section form
+    condition:
+      # Condition that form is active.
+      - active_loop: show_diaryforsection_form
+    steps:
+      - action: show_diaryforsection_form
+      - active_loop: null
+      # The action we want to run when the form is submitted.
+      - action: action_submitshowdiaryforsection
+
+  - rule: Show diary for project
+    steps:
+      - intent: show_diary_for_project
+      - action: show_diaryforproject_form
+      - active_loop: show_diaryforproject_form
+
+  - rule: Submit show diary for a project form
+    condition:
+      # Condition that form is active.
+      - active_loop: show_diaryforproject_form
+    steps:
+      - action: show_diaryforproject_form
+      - active_loop: null
+      # The action we want to run when the form is submitted.
+      - action: action_submitshowdiaryforproject
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_please_rephrase

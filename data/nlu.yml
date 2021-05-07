@@ -1,0 +1,210 @@
+version: "2.0"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+    #  - hello
+    #  - hi
+    #  - hello there
+    #  - good morning
+    #  - good evening
+    #  - moin
+    #  - hey there
+    #  - let's go
+    #  - hey dude
+    #  - goodmorning
+    # - goodevening
+    #  - good afternoon
+
+  # - intent: show_projects
+  # examples: |
+  # - Show Projects
+  # - Show all Projects
+  # - show me a list of projects
+  # - show projects
+  # - what all projects I have
+  # - how many projects I have
+  # - Can I see a list of Projects
+  # - List of projects
+  # show projects
+  - intent: qoute_phone
+    examples: |
+      - yes please
+      - No please
+      - premise-based
+      - cloud-based
+      - i don't know
+      - I have reliability issues such as outages or poor voice quality
+      - I’m consolidating systems
+      - I’m growing and have new locations
+      - Moving to the cloud 
+      - Antiquated system that is difficult to manage
+      - End of life equipment
+      - Collaboration challenges
+      - Need integration with apps such as SFDC, Outlook, etc.
+      - Looking for a contact center solution
+      - Other
+      - yeah 
+      - nah
+      - Yes Links to scheduling page
+      - No, just use the information you have already
+      - Ok, maybe that’s a good idea. (Links to scheduling page)
+      - No, I understand completely. But here are some specific requirements that I think you should know (optional) 
+      - Show [Projects]{"entity":"projects","value":"Projects"}
+      - show [projects]{"entity":"projects","value":"projects"}
+      - show me a list of [projects]{"entity":"projects","value":"projects"}
+      - Show me a List of [Projects]{"entity":"projects","value":"Projects"}
+      - List of [Projects]{"entity":"projects","value":"Projects"}
+      - All [Projects]{"entity":"projects","value":"Projects"}
+      # - [Projects]{"entity":"projects","value":"Projects"}
+      - what all [projects]{"entity":"projects","value":"projects"} I have
+      - how many [projects]{"entity":"projects","value":"projects"} I have
+      - all [Projects]{"entity":"projects","value":"Projects"}
+      - Show me [Projects]{"entity":"projects","value":"Projects"}
+
+  #show all sections
+  - intent: show_sections
+    examples: |
+      - Show [sections]{"entity":"sections","value":"sections"}
+      - show [sections]{"entity":"sections","value":"sections"}
+      - Show me [sections]{"entity":"sections","value":"sections"}
+      - Show me a [section]{"entity":"sections","value":"section"} for project
+      - [sections]{"entity":"sections","value":"sections"} please
+      - please show [sections]{"entity":"sections","value":"sections"}
+      - show [section]{"entity":"sections","value":"section"}
+      - please show me [sections]{"entity":"sections","value":"sections"}
+
+  # show sections for project
+  - intent: show_sections_for_project
+    examples: |
+      - Show sections of [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - Show Section of [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - Show section of [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - Show section of [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - provide me section for project
+      - show me section for project
+      # - [proj-At1]{"entity":"projectname","value":"proj-At1"}
+      - project name [proj-At1]{"entity":"projectname","value":"proj-At1"}
+      - Show Sections of [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - I want to see a list of sections under [proj-At1]{"entity":"projectname","value":"proj-At1"} project 
+      - What all sections are there in [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - Provide me a list of sections for [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+
+  # show all diaries
+  - intent: show_diaries
+    examples: |
+      # - [Show diaries]{"entity":"show_d","value":"Show diaries"}
+      # - [show diaries]{"entity":"show_d","value":"show diaries"}
+      # - [Show me diaries]{"entity":"show_d","value":"Show me diaries"}
+      - [Show me a diary]{"entity":"show_d","value":"Show me a diary"} for project
+      - [Show Diary]{"entity":"show_d","value":"Show Diary"} please
+      - please [show diaries]{"entity":"show_d","value":"show diaries"}
+      # - [show Diaries]{"entity":"show_d","value":"show Diaries"}
+      - please [show me diaries]{"entity":"show_d","value":"show me diaries"}
+
+  # - intent: create_diary_new
+  # examples: |
+  # - create a diary for [Level 1]{"entity":"section","value":"Level 1"} section on [31-Jan-2021]{"entity":"date","value":"31-Jan-2021"} with title of [Diary for Level 1]{"entity":"title","value":"Diary for Level 1"}
+  # - I want to create a diary with [Diary for Section A]{"entity":"title","value":"Diary for Section A"}title for [Section A]{"entity":"section","value":"Section A"} section  for [12-Feb_2021]{"entity":"date","value":"12-Feb-2021"} date
+  # - Make diary with [Diary for Section Level 3]{"entity":"title","value":"Diary for Section Level 1"}title for [Level 3]{"entity":"section","value":"Level 3"} section for [13-Jan-2021]{"entity":"date","value":"13-Jan-2021"}date
+  # - Add diary for [section groundfloor]{"entity":"section","value":"section groundfloor"} section on [6-Jan-2021]{"entity":"date","value":"6-Jan-2021"} date with title of [Diary for section groundfloor]{"entity":"title","value":"Diary for section groundfloor"}
+
+  - intent: create_diary
+    examples: |
+      # - [string]{"entity":"section_d","value":"string"}
+      # - [testingg]{"entity":"title_d","value":"tesstingg"}
+      # - [2021-3-11T4:32:34]{"entity":"date_d","value":"2021-3-11T4:32:34"}
+      - create diary
+      - create diary for section [string]{"entity":"section_d","value":"string"}
+      - create diary for section [string]{"entity":"section_d","value":"string"} with title [testing title class name sgpijsd efieroj erjf car kfreo sej wekdow window]{"entity":"title_d"}
+      - create diary for section [string]{"entity":"section_d","value":"string"} with title [testing title class name sgpijsd efieroj erjf car kfreo sej wekdom xindow]{"entity":"title_d"} and date [2021-3-11T4:32:34]{"entity":"date_d","value":"2021-3-11T4:32:34"}
+      - Please [create diary]{"entity":"create_d","value":"create diary"}
+      - I want to [create Diary]{"entity":"create_d","value":"create Diary"}
+      - How to [create Diary]{"entity":"create_d","value":"create Diary"}
+      - [Diary creation]{"entity":"create_d","value":"Diary Creation"} Form
+      - Form for [Diary creation]{"entity":"create_d","value":"Diary creation"}
+      - Want to know how to [create Diary]{"entity":"create_d","value":"Create Diary"}
+      - Can you tell me how to [create diary]{"entity":"create_d","value":"create diary"}.
+      - [create diary]{"entity":"create_d","value":"create diary"} for me
+      - procedure of [diary creation]{"entity":"create_d","value":"diary creation"}
+
+  #show diary for project
+  - intent: open_diary
+    examples: |
+      - Please [open diary]{"entity":"open_d","value":"open diary"}
+      # - [Open diary]{"entity":"open_d","value":"Open diary"}
+      # - [open Diary]{"entity":"open_d","value":"open Diary"}
+      # - [Open Diary]{"entity":"open_d","value":"Open Diary"}
+
+  - intent: show_diary_for_project
+    examples: |
+      - Show [2]{"entity":"selectdiarieslimit","value":"2"} diary for [proj-At1]{"entity":"projectname","value":"proj-At1"} project.    
+      - show me [2]{"entity":"selectdiarieslimit","value":"2"} diaries under [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - show [2]{"entity":"selectdiarieslimit","value":"2"} diaries for [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - Show [2]{"entity":"selectdiarieslimit","value":"2"} diary of [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - provide me diaries for project
+      - show diary for project
+      - [proj-At1]{"entity":"projectname","value":"proj-At1"} project
+      - show diary for [proj-At1]{"entity":"projectname","value":"proj-At1"} project 
+      - show [2]{"entity":"selectdiarieslimit","value":"2"} diary for project
+      - provide me [3]{"entity":"selectdiarieslimit","value":"3"} diaries for project
+      # - [proj-At1]{"entity":"projectname","value":"proj-At1"}
+      - [1 2 3 4 5 6 7 8 9 0 all]{"entity":"selectdiarieslimit","value":"2"}
+      - project name [proj-At1]{"entity":"projectname","value":"proj-At1"}
+      - Provide me a list of diaries under [proj-A1]{"entity":"projectname","value":"proj-A1"} project
+      - Can you show me what all diaries are in [Building]{"entity":"projectname","value":"Building"} project
+      - Show me diaries for [Agriculture]{"entity":"projectname","value":"Agriculture"} project
+      - what all diaries are there in [IT Services]{"entity":"projectname","value":"IT services"} project
+
+  # show diary for section
+  - intent: show_diary_for_section
+    examples: |
+      - Show diary for [North Section"]{"entity":"showdiaryforsection"} section.
+      - show me a diaries under [North Section"]{"entity":"showdiaryforsection"} Section
+      - provide me diaries for section
+      - show diary for section
+      - [Basement]{"entity":"showdiaryforsection"}
+      - [Basement]{"entity":"showdiaryforsection"}
+      - show diaries for [string]{"entity":"showdiaryforsection"} section
+      - Provide me a list of diaries under [Basement]{"entity":"showdiaryforsection"} Section
+      - Can you show me what all diaries are Basement [North Section]{"entity":"showdiaryforsection","value":"North Section"}
+      - Show me diaries for [East Section]{"entity":"showdiaryforsection","value":"East Section"} 
+      - what all diaries are there in [Groundfloor]{"entity":"showdiaryforsection","value":"Groundfloor"}  section
+
+  - intent: thanks
+    examples: |
+      - thankyou
+      - thanks
+      - thank you
+      - Thanks
+      - Thank You
+      - that's it
+      - no thanks
+      - i am good with it
+      - thanks for your help
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
