@@ -1,0 +1,348 @@
+---
+version: "2.0"
+intents:
+  - greet
+  - thanks
+  - affirm
+  - qoute_phone:
+      use_entities:
+        - projects
+  - show_projects_count
+  - deny
+  - bot_challenge
+  - show_sections:
+      use_entities:
+        - sections
+  - show_diaries:
+      use_entities:
+        - show_d
+  - create_diary:
+      use_entities:
+        - create_d
+        - section_d
+        - title_d
+        - date_d
+  - open_diary:
+      use_entities:
+        - open_d
+  - show_sections_for_project:
+      use_entities:
+        - projectname
+  - show_diary_for_section:
+      use_entities:
+        - showdiaryforsection
+  - show_diary_for_project:
+      use_entities:
+        - projectname
+
+forms:
+  project_form:
+    phone_system:
+      - type: from_text
+    brand_system:
+      - type: from_text
+    possible_communications:
+      - type: from_text
+    what_industry:
+      - type: from_text
+    many_phones:
+      - type: from_text
+    multiple_locations:
+      - type: from_text
+    many_people:
+      - type: from_text 
+    website_address:
+      - type: from_text 
+    more_items:
+      - type: from_text
+    come_to_Quoteaphone:
+      - type: from_text   
+    premier_industry:
+      - type: from_text 
+    following_information:
+      - type: from_text 
+    First_name:
+      - type: from_text
+    Last_name:
+      - type: from_text
+    Business_Title:
+      - type: from_text
+    Company_Name:
+      - type: from_text  
+    Email_user:
+      - type: from_text
+    Phone_number:
+      - type: from_text
+    Address_user:
+      - type: from_text
+    city_user:
+      - type: from_text
+    state_user:
+      - type: from_text
+    zip_user:
+      - type: from_text                                   
+  section_form:
+    sections_count:
+      - type: from_text
+  diary_form:
+    diaries_count:
+      - type: from_text
+  show_sectionforproject_form:
+    sectionsperprojectid:
+      - type: from_entity
+        entity: projectname
+  show_diaryforsection_form:
+    diarieispersectiontid:
+      - type: from_entity
+        entity: showdiaryforsection
+
+  show_diaryforproject_form:
+    diarieisperprojectid:
+      - type: from_text
+        intent: show_diary_for_project
+    diarieslimit:
+      - type: from_entity
+        entity: selectdiarieslimit
+
+  create_diary_form:
+    section_old:
+      - type: from_entity
+        entity: section_d
+    title_old:
+      - type: from_entity
+        entity: title_d
+    date_old:
+      - type: from_entity
+        entity: date_d
+  open_diary_form:
+    projectid:
+      - type: from_text
+
+entities:
+  - projects
+  - sections
+  - show_d
+  - create_d
+  - section_d
+  - title_d
+  - date_d
+  - open_d
+  - projectname
+  - showdiaryforsection
+  - showdiaryforproject
+  - selectdiarieslimit
+
+slots:
+  phone_system:
+    type: text
+    influence_conversation: false
+  brand_system:
+    type: text
+    influence_conversation: false
+  possible_communications:
+    type: text
+  what_industry:
+    type: text    
+    influence_conversation: false
+  many_phones:
+    type: text    
+    influence_conversation: false
+  multiple_locations:
+    type: text    
+    influence_conversation: false
+  many_people:
+    type: text    
+    influence_conversation: false
+  website_address:
+    type: text    
+    influence_conversation: false 
+  more_items:
+    type: text    
+    influence_conversation: false
+  come_to_Quoteaphone:
+    type: text    
+    influence_conversation: false
+  premier_industry:
+    type: text    
+    influence_conversation: false
+  following_information:
+    type: text
+    influence_conversation: false
+  First_name:
+    type: text      
+    influence_conversation: false
+  Last_name:
+    type: text      
+    influence_conversation: false
+  Business_Title:
+    type: text      
+    influence_conversation: false
+  Company_Name:
+    type: text      
+    influence_conversation: false
+  Email_user:
+    type: text      
+    influence_conversation: false
+  Phone_number:
+    type: text      
+    influence_conversation: false
+  Address_user:
+    type: text      
+    influence_conversation: false
+  city_user:
+    type: text      
+    influence_conversation: false
+  state_user:
+    type: text      
+    influence_conversation: false
+  zip_user:
+    type: text      
+    influence_conversation: false                                   
+  sections_count:
+    type: text
+    influence_conversation: false
+  diaries_count:
+    type: text
+    influence_conversation: false
+  sectionsperprojectid:
+    type: text
+    influence_conversation: false
+  diarieispersectiontid:
+    type: text
+    influence_conversation: false
+  diarieisperprojectid:
+    type: text
+    influence_conversation: false
+  diarieslimit:
+    type: text
+    influence_conversation: false
+  projectid:
+    type: text
+    influence_conversation: false
+  section_old:
+    type: text
+    influence_conversation: true
+  title_old:
+    type: text
+    influence_conversation: true
+  date_old:
+    type: text
+    influence_conversation: false
+actions:
+  - utter_greet
+  - utter_first_message
+  - utter_welcome_message
+  - utter_default
+  - utter_thanks
+  - utter_affirm
+  - utter_iamabot
+  - utter_deny
+  - validate_project_form
+  - action_submitproject
+  - validate_section_form
+  - action_submitsection
+  - validate_diary_form
+  - action_submitdiary
+  - utter_create_diary_form
+  - validate_create_diary_form
+  - action_submitcreatediary
+  - validate_open_diary_form
+  - action_opendiary
+  - validate_show_sectionforproject_form
+  - action_submishowtsectionforproject
+  - validate_show_diaryforsection_form
+  - action_submitshowdiaryforsection
+  - validate_show_diaryforproject_form
+  - action_submitshowdiaryforproject
+
+responses:
+  utter_first_message:
+    - text: " How can I help you ?"
+  utter_greet:
+    - text: |-
+        Hello Guest!
+        Welcome to Chat Bot, your satisfaction is the highest priority
+  utter_welcome_message:
+    - text: "Click for what we can help you with?!\n\
+        \x20Click <Diaries> "
+  utter_thanks:
+    - text: "welcome"
+  utter_affirm:
+    - text: " Is there anything else I can help you with?"
+  utter_default:
+    - text: "ok"
+  utter_ask_phone_system:
+    - text: "Your current phone system is.."
+  utter_ask_brand_system:
+    - text: "Do you recall the brand of your system?"
+  utter_ask_possible_communications:
+    - text: "What’s prompting the possible communications system change?"
+  utter_ask_what_industry:
+    - text: "What industry are you in? " 
+  utter_ask_many_phones:
+    - text: "How many phones do you currently have in use? "
+  utter_ask_multiple_locations:
+    - text: "If you have multiple locations, how many locations are there?"
+  utter_ask_many_people:
+    - text: "How many people do you have who would be using the system?"
+  utter_ask_website_address:
+    - text: "What is your website address?"
+  utter_ask_more_items:
+    - text: "OK we are almost done. Just a couple more items. Have you received any quotes as of yet?"
+  utter_ask_come_to_Quoteaphone:
+    - text: "So, you’ve come to Quoteaphone to get the best, most accurate price quotes possible. The information you provided will allow us to provide a few apples-to-apples quotes for your consideration. Because every business and situation is unique, if we could give you a completely customized quotes, would you be willing to schedule a quick discovery call prior to receiving your Quoteaphone quote?"
+  utter_ask_premier_industry:
+    - text: "Great we will go ahead and provide a few quotes from the top tier providers as currently rated by the premier industry research organization, Gartner Group.  But before we do that, are you sure you don’t want to have a quick call?  We’ve been asking questions for over 40 years and promised to take as little time as possible to get the information we need."
+  utter_ask_following_information:
+    - text: "In order for us to get you your quote please fill out the following information.  We pledge not to use this information for anything other than providing you your quote."
+  utter_ask_First_name:
+    - text: "First Name"
+  utter_ask_Last_name:
+    - text: "Last Name" 
+  utter_ask_Business_Title:
+    - text: "Business Title"
+  utter_ask_Company_Name:
+    - text: "Company Name"
+  utter_ask_Email_user:
+    - text: "Email"
+  utter_ask_Phone_number:
+    - text: "Phone number"
+  utter_ask_Address_user:
+    - text: "Address"
+  utter_ask_city_user:
+    - text: "City"
+  utter_ask_state_user:
+    - text: "State"
+  utter_ask_zip_user:
+    - text: "Zip"               
+  utter_ask_sections_count:
+    - text: "how many Sections"
+  utter_ask_diaries_count:
+    - text: "how many diary"
+  utter_create_diary_form:
+    - text: "please fill the details below:"
+  utter_ask_sectionsperprojectid:
+    - text: "Please provide the project name for sections"
+  utter_ask_diarieispersectiontid:
+    - text: "Please provide the section name for diaries"
+  utter_ask_diarieisperprojectid:
+    - text: "Please provide the project name for diaries"
+  utter_ask_diarieslimit:
+    - text: "PLease provide the number of diaries"
+  utter_ask_section_old:
+    - text: "Under which section you want to create this diary"
+  utter_ask_title_old:
+    - text: "Provide the title of Diary"
+  utter_ask_date_old:
+    - text: "Provide the date of Diary"
+  utter_ask_projectid:
+    - text: "Please provide the project name under which you want to open diary"
+  utter_deny:
+    - text: "no"
+  utter_iamabot:
+    - text: "I am a Bot and I am happy to help you"
+  utter_please_rephrase:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

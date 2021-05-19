@@ -1,0 +1,175 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "code": "s1",
+      "name": "Section 1",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "474250b2-6934-4184-81eb-b809b5753ae1",
+      "is_active": true
+    },
+    {
+      "id": "2",
+      "code": "s2",
+      "name": "Section 2",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "95ca23e8-9131-4127-b1d8-6c2f04fe9541",
+      "is_active": true
+    },
+    {
+      "id": "3",
+      "code": "lvl-1",
+      "name": "Level 1",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "7ba67a64-54f5-4fa3-9233-b4999438c3e2",
+      "is_active": true
+    },
+    {
+      "id": "4",
+      "code": "lvl-2",
+      "name": "Level 2",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "da29cf3e-405b-4ac3-a358-d12583c85eca",
+      "is_active": true
+    },
+    {
+      "id": "5",
+      "code": "lvl-3",
+      "name": "Level 3",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "d565a954-4897-4f19-a41c-93be44ab14ec",
+      "is_active": true
+    },
+    {
+      "id": "6",
+      "code": "lvl-4",
+      "name": "Level 4",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "2b11f516-67e1-49e4-8ed5-1eba08c5f771",
+      "is_active": true
+    },
+    {
+      "id": "7",
+      "code": "gf",
+      "name": "Ground Floor",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "610347d6-24f9-4b66-ad69-08eef440b831",
+      "is_active": true
+    },
+    {
+      "id": "8",
+      "code": "bas",
+      "name": "Basement",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "0eff1915-0b50-42d6-8019-07b2194c763a",
+      "is_active": true
+    },
+    {
+      "id": "9",
+      "code": "sub",
+      "name": "Substructure",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "43f0e8a9-ad3e-4905-8128-1abeac6ad525",
+      "is_active": true
+    },
+    {
+      "id": "10",
+      "code": "sup",
+      "name": "Superstructure",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "15dc6993-d1aa-4dad-8eb3-90aa2b3af450",
+      "is_active": true
+    },
+    {
+      "id": "11",
+      "code": "wst-sec",
+      "name": "West Section",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "202c5280-918c-4fb3-8199-2461e363a8b3",
+      "is_active": true
+    },
+    {
+      "id": "12",
+      "code": "nrth-sec",
+      "name": "North Section",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "c02d1ac8-9ac1-4023-a921-9a07ebbb3f8a",
+      "is_active": true
+    },
+    {
+      "id": "13",
+      "code": "eas-sec",
+      "name": "East Section",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "1f3ff256-94b1-46b4-9095-5511e34d0628",
+      "is_active": true
+    },
+    {
+      "id": "14",
+      "code": "south-sec",
+      "name": "South Section",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "368392af-6d71-40b4-9c5d-33ff937677f6",
+      "is_active": true
+    },
+    {
+      "id": "15",
+      "code": "has",
+      "name": "hassan",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "4b4127da-cb97-41cb-8a12-46d7516526a6",
+      "is_active": true
+    },
+    {
+      "id": "16",
+      "code": "has1",
+      "name": "hassan",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "34021d33-f5d7-4965-ba99-7fd328027965",
+      "is_active": true
+    },
+    {
+      "id": "17",
+      "code": "has1",
+      "name": "hassan",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "377fb8ca-38a4-4398-aba6-c758f0814adc",
+      "is_active": true
+    },
+    {
+      "id": "18",
+      "code": "tesst",
+      "name": "Harjinder Sections",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "d5017211-c988-45b9-9a87-e7131083ce59",
+      "is_active": true
+    },
+    {
+      "id": "19",
+      "code": "tesst12",
+      "name": "Harjinder Sections 2",
+      "project_public_id": "c1c48cb9-52eb-4efd-92e3-e2f707437514",
+      "parent_public_id": null,
+      "public_id": "5c67c162-c279-4765-ab28-ac0b00c5ce4d",
+      "is_active": true
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+
+# ---
+# version: "2.0"
+# intents:
+#   # - greet
+#   # - affirm
+#   - phone_system:
+#         use_entities:
+#           phone_system_type
+#           possible_communication_type
+#   - possible_communication
+
+
+
+# entities:
+#   # - projects
+#   # - sections
+#   # - show_d
+#   # - create_d
+#   # - section_d
+#   - phone_system_type
+#   - possible_communication_type
+  
+# forms:
+#   testingform:
+#     testingslot:
+#       - type: from_entity
+#         entity: phone_system_type
+#     commslot:
+#       - type: from_entity
+#         entity: possible_communication_type
+
+# slots:
+#   testingslot:
+#     type: text
+#     influence_conversation: false
+#   commslot:
+#     type: text
+#     influence_conversation: false
+# actions:
+ 
+#   - utter_first_message
+#   # - utter_welcome_message
+#   # - utter_default
+  
+#   - utter_greet
+#   # - utter_iamabot
+#   - utter_deny
+#   - validate_testingform
+#   - action_submit_testingform
+  
+
+# responses:
+#   utter_first_message:
+#     - text: " How can I help you ?"
+#   utter_greet:
+#     - text: " How can I help you ?"
+#   # utter_welcome_message:
+#   #   - text: "Click for what we can help you with?!\n\
+#   #       \x20Click <Diaries> "
+ 
+  
+#   #   - text: " Is there anything else I can help you with?"
+#   utter_default:
+#     - text: "ok"
+#   utter_brand_of_system:
+#     - text: "Do you recall the brand of your system?"  
+#   utter_phone_system:
+#     - text: "What is your current phone system?"
+
+
+#   utter_possible_communication:
+#     - text: "What is your current phone system?"
+#   utter_iamabot:
+#     - text: "I am a Bot and I am happy to help you"
+#   utter_ask_testingform_testingslot:
+#     - text: "Please provide the phnee"
+#   utter_please_rephrase:
+#     - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+# session_config:
+#   session_expiration_time: 60
+#   carry_over_slots_to_new_session: true

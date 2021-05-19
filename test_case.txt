@@ -1,0 +1,13 @@
+# show projects
+show projects
+
+#show sections for project
+show sections for proj-B project
+
+# show diaries for sections
+show diaries for Level 1 sections
+
+# show diary for project
+show diary for proj-A testA project
+
+
